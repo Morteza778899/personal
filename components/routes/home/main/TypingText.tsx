@@ -49,7 +49,7 @@ const TypingText = () => {
             <Collapse in={open3} timeout={1000} orientation="horizontal">
                 <Typography variant="h3" sx={{ fontWeight: 700, whiteSpace: 'nowrap',px:1 }}>UI/UX Designer.</Typography>
             </Collapse>
-            <Box sx={{ width: 2, height: 50, bgcolor: theme.palette.divider }}></Box>
+            <Box sx={{ width: 2, height: 50, bgcolor: theme.palette.primary.main }}></Box>
         </Stack>
     )
 }

@@ -1,6 +1,7 @@
 import { Box, Divider, Typography } from '@mui/material'
 import Head from 'next/head'
 import { useContext } from 'react';
+import Features from '../components/routes/home/features/Features';
 import Header from '../components/routes/home/header/Header'
 import Main from '../components/routes/home/main/Main';
 import { Context } from './_app';
@@ -16,8 +17,10 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Main/>
-        <Divider sx={{my:5}}/>
+        <Main />
+        <Divider sx={{ my: 7, maxWidth: 1200, mx: 'auto' }} />
+        <Features />
+        <Divider sx={{ my: 7, maxWidth: 1200, mx: 'auto' }} />
       </main>
     </Box>
   )

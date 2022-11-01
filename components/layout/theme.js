@@ -6,9 +6,9 @@ export const getDesignTokens = (mode) => ({
     ...(mode === 'light'
       ? {
         // palette values for light mode
-        primary: amber,
-        secondary: { main: '#ff014f' },
-        divider: grey[400],
+        primary: { main: '#ff014f' },
+        // secondary: { main: '#ff014f' },
+        divider: grey[300],
         background: {
           default: '#ecf0f3',
           paper: 'linear-gradient(145deg, #e2e8ec, #ffffff)',
@@ -18,15 +18,15 @@ export const getDesignTokens = (mode) => ({
           default: '5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff'
         },
         text: {
-          primary: grey[900],
+          primary: grey[800],
           secondary: grey[700],
         },
       }
       : {
         // palette values for dark mode
-        primary: deepOrange,
-        secondary: { main: '#ff014f' },
-        divider: grey[700],
+        primary: { main: '#ff014f' },
+        // secondary: { main: '#ff014f' },
+        divider: grey[800],
         background: {
           default: '#212428',
           paper: 'linear-gradient(145deg, #1e2024, #23272b)',
@@ -55,6 +55,14 @@ const theme = createTheme({
         })
       }
     },
+    MuiSvgIcon: {
+      styleOverrides: {
+        fontSizeLarge: {
+          width: '2em',
+          height: '2em',
+        }
+      }
+    }
   }
 })
 
@@ -76,6 +84,7 @@ export const defaultTheme = {
           position: 'relative',
           transition: 'all 0.45s',
           zIndex: 100,
+          borderRadius: '6px',
           "&:before": {
             borderRadius: "inherit",
             backgroundImage: theme.palette.background.paperHover,
@@ -99,6 +108,52 @@ export const defaultTheme = {
             transform: 'translateY(-4px)'
           }
         }),
+        elevation2: ({ ownerState, theme }) => ({
+          "& .hover-up,.hover-icon": {
+            transition: 'all .4s'
+          },
+          "&:hover": {
+            "&:before": {
+              opacity: 1
+            },
+            "& .hover-up": {
+              transform: 'translateY(-15px)'
+            },
+            "& .hover-icon": {
+              opacity: 1,
+            }
+          }
+        }),
+        elevation3: ({ ownerState, theme }) => ({
+          "& p,h5,.hover-up,.hover-icon,svg": {
+            transition: 'all .4s'
+          },
+          "&:hover": {
+            "&:before": {
+              opacity: 1
+            },
+            "& p,h5": {
+              color: theme.palette.background.default
+            },
+            "& svg:first-child": {
+              stroke: theme.palette.background.default
+            },
+            "& .hover-up": {
+              transform: 'translateY(-15px)'
+            },
+            "& .hover-icon": {
+              opacity: 1,
+            }
+          }
+        }),
+      }
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        fontSizeLarge: {
+          width: '1.4em',
+          height: '1.4em',
+        }
       }
     },
     MuiStack: {
