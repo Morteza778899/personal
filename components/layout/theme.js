@@ -85,6 +85,9 @@ export const defaultTheme = {
           transition: 'all 0.45s',
           zIndex: 100,
           borderRadius: '6px',
+          "& .hover-up,.hover-icon": {
+            transition: 'all .4s'
+          },
           "&:before": {
             borderRadius: "inherit",
             backgroundImage: theme.palette.background.paperHover,
@@ -109,9 +112,6 @@ export const defaultTheme = {
           }
         }),
         elevation2: ({ ownerState, theme }) => ({
-          "& .hover-up,.hover-icon": {
-            transition: 'all .4s'
-          },
           "&:hover": {
             "&:before": {
               opacity: 1
