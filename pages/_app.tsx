@@ -1,4 +1,7 @@
 import '../styles/globals.css'
+import "swiper/scss"; // core Swiper
+import "swiper/scss/navigation"; // Navigation module
+import "swiper/scss/pagination"; // Pagination module
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from '@emotion/react'
 import { defaultTheme, getDesignTokens } from '../components/layout/theme'
