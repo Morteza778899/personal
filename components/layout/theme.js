@@ -169,25 +169,36 @@ export const defaultTheme = {
     MuiButton: {
       styleOverrides: {
         root: ({ ownerState, theme }) => ({
-          background: theme.palette.background.paper,
-          boxShadow: theme.palette.shadow.default
+          boxShadow: theme.palette.shadow.default,
+          backgroundImage: theme.palette.background.paper,
+          position: 'relative',
+          transition: 'all 0.45s',
+          zIndex: 100,
+          borderRadius: '6px',
+          "& .hover-up,.hover-icon": {
+            transition: 'all .4s'
+          },
+          "&:before": {
+            borderRadius: "inherit",
+            backgroundImage: theme.palette.background.paperHover,
+            content: "''",
+            display: 'block',
+            height: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            opacity: 0,
+            width: '100%',
+            zIndex: "-100",
+            transition: 'opacity 0.45s'
+          },
+          "&:hover": {
+            "&:before": {
+              opacity: 1
+            },
+            transform: 'translateY(-4px)'
+          }
         })
-        // containedInfo: {
-        //   backgroundColor: "#efefef",
-        //   boxShadow: "none",
-        //   color: "black",
-        //   ":hover": {
-        //     color: "white",
-        //   },
-        // },
-        // sizeLarge: {
-        //   padding: "8px 32px",
-        //   fontSize: "1.2rem",
-        // },
-        // sizeMedium: {
-        //   padding: "6px 24px",
-        //   fontSize: "1rem",
-        // },
       },
     },
     MuiTextField: {

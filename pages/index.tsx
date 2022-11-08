@@ -5,6 +5,7 @@ import Features from "../components/routes/home/features/Features";
 import Header from "../components/routes/home/header/Header";
 import Main from "../components/routes/home/main/Main";
 import Portfolio from "../components/routes/home/portfolio/Portfolio";
+import Pricing from "../components/routes/home/pricing/Pricing";
 import Resume from "../components/routes/home/resume/Resume";
 import Testimonial from "../components/routes/home/testimonial/Testimonial";
 import { Context } from "./_app";
@@ -31,6 +32,8 @@ export default function Home() {
         <Resume />
         <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
         <Testimonial />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Pricing />
         <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
       </main>
     </Box>
