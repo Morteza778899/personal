@@ -1,6 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 import Head from "next/head";
 import { useContext } from "react";
+import Contact from "../components/routes/home/contact/Contact";
 import Features from "../components/routes/home/features/Features";
 import Header from "../components/routes/home/header/Header";
 import Main from "../components/routes/home/main/Main";
@@ -34,6 +35,8 @@ export default function Home() {
         <Testimonial />
         <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
         <Pricing />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Contact/>
         <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
       </main>
     </Box>
