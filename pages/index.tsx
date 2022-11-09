@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useContext } from "react";
 import Contact from "../components/routes/home/contact/Contact";
 import Features from "../components/routes/home/features/Features";
+import Footer from "../components/routes/home/footer/Footer";
 import Header from "../components/routes/home/header/Header";
 import Main from "../components/routes/home/main/Main";
 import Portfolio from "../components/routes/home/portfolio/Portfolio";
@@ -36,9 +37,10 @@ export default function Home() {
         <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
         <Pricing />
         <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
-        <Contact/>
-        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Contact />
+        <Divider sx={{ my: 12, maxWidth: 1200, mx: "auto" }} />
       </main>
+      <Footer />
     </Box>
   );
 }
