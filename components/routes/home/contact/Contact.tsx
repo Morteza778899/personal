@@ -1,10 +1,10 @@
 import { Box, Grid, Paper, Stack, Typography } from "@mui/material";
-import Image from "next/image";
 import Bio from "./Bio";
 import FormMe from "./FormMe";
+
 const Contact = () => {
   return (
-    <Box sx={{ maxWidth: 1300, mx: "auto", my: 10 }}>
+    <Box id='Contact' sx={{ maxWidth: 1300, mx: "auto", my: 10 }}>
       <Box sx={{ my: 10 }}>
         <Typography
           variant="body2"

@@ -39,7 +39,7 @@ const Features = () => {
         },
     ]
     return (
-        <Box component='section' sx={{ maxWidth: 1300, mx: 'auto', my: 14 }}>
+        <Box id='Features' component='section' sx={{ maxWidth: 1300, mx: 'auto', my: 14 }}>
             <Typography variant="body2" sx={{ letterSpacing: '3px', my: 2, color: 'primary.main' }}>FEATURES</Typography>
             <Typography variant="h2" fontWeight={700}>What I Do</Typography>
             <Grid container direction='row' spacing={4} sx={{ my: 3 }}>

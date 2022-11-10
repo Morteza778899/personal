@@ -11,7 +11,7 @@ const Pricing = () => {
   const [tab, setTab] = useState("Standard");
 
   return (
-    <Box sx={{ maxWidth: 1300, mx: "auto",my:10 }}>
+    <Box id='Pricing' sx={{ maxWidth: 1300, mx: "auto",my:10 }}>
       <Grid container>
         <Grid item xs={5.5} sx={{ position: "relative" }}>
           <Box sx={{ position: "sticky", top: 0, py: 6 }}>

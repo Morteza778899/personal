@@ -53,7 +53,7 @@ const Portfolio = () => {
         },
     ]
     return (
-        <Box component='section' sx={{ maxWidth: 1300, mx: 'auto', my: 14 }}>
+        <Box id='Portfolio' component='section' sx={{ maxWidth: 1300, mx: 'auto', my: 14 }}>
             <Typography variant="body2" textAlign='center'
                 sx={{ letterSpacing: '3px', my: 2, color: 'primary.main' }}>
                 VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
