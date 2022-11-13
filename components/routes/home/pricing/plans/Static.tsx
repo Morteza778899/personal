@@ -68,6 +68,7 @@ const Static: FC<Props> = ({ open }) => {
         <Grid container>
           {data.map((value, index) => (
             <Grid
+              item
               key={index}
               xs={12}
               sm={6}
@@ -106,7 +107,7 @@ const Static: FC<Props> = ({ open }) => {
         <Stack
           direction={{ xs: "column", sm: "row" }}
           justifyContent="center"
-          alignItems='center'
+          alignItems="center"
           sx={{ opacity: 0.8 }}
           gap={2}
         >

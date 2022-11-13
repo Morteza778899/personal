@@ -68,6 +68,7 @@ const Premium: FC<Props> = ({ open }) => {
         <Grid container>
           {data.map((value, index) => (
             <Grid
+              item
               key={index}
               xs={12}
               sm={6}

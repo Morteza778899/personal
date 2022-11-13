@@ -65,11 +65,11 @@ const Header: FC<Props> = ({ location }) => {
       left: 0,
       behavior: "smooth",
     });
+    setOpen(false);
   };
 
   const openHandler = (x: boolean) => {
     setOpen(x);
-    setOpen(false)
   };
 
   return (
