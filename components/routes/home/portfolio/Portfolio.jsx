@@ -53,7 +53,7 @@ const Portfolio = () => {
         },
     ]
     return (
-        <Box id='Portfolio' component='section' sx={{ maxWidth: 1300, mx: 'auto', my: 14 }}>
+        <Box id='Portfolio' component='section' sx={{ maxWidth: 1300, mx: 'auto', my: 14, px: { xs: 2, sm: 3, md: 4 } }}>
             <Typography variant="body2" textAlign='center'
                 sx={{ letterSpacing: '3px', my: 2, color: 'primary.main' }}>
                 VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
@@ -61,10 +61,10 @@ const Portfolio = () => {
             <Typography variant="h2" fontWeight={700} textAlign='center'>My Portfolio</Typography>
             <Grid container direction='row' spacing={4} sx={{ my: 3 }}>
                 {data.map((value, index) => (
-                    <Grid item key={index} xs={4}>
+                    <Grid item key={index} xs={12} sm={6} lg={4}>
                         <Paper elevation={0} sx={{
                             borderRadius: '10px',
-                            p: 4,
+                            p: { xs: 2, sm: 3, md: 4 },
                             "&:hover": {
                                 "&:before": {
                                     opacity: themeMode == 'dark' ? 1 : 0
@@ -88,7 +88,7 @@ const Portfolio = () => {
                                 <Image src={value.img} alt="" />
                             </Box>
                             <Stack className='hover-up'>
-                                <Stack direction='row' sx={{ mt: 2,mb:1, alignItems: 'center', justifyContent: 'space-between' }}>
+                                <Stack direction='row' sx={{ mt: 2, mb: 1, alignItems: 'center', justifyContent: 'space-between' }}>
                                     <Typography variant="body2"
                                         sx={{
                                             letterSpacing: '3px',
@@ -113,7 +113,15 @@ const Portfolio = () => {
                                 <Typography variant="h6" fontWeight={600} sx={{
                                     cursor: 'pointer',
                                     transition: 'all .4s',
-                                    px:1,
+                                    px: 1,
+                                    display: "-webkit-box",
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    'line-clamp': "2",
+                                    "-webkit-line-clamp": "2" /* number of lines to show */,
+                                    "-webkit-box-orient": "vertical",
+                                    height: "60px",
+                                    "line-height": "30px",
                                     "&:hover": {
                                         color: 'primary.main',
                                         "& .hover-icon": {

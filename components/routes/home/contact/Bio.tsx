@@ -16,7 +16,7 @@ const Bio = () => {
       elevation={0}
       sx={{
         borderRadius: "10px",
-        p: 4,
+        p: { xs: 2.5, sm: 3, md: 4 },
       }}
     >
       <Box
@@ -40,16 +40,16 @@ const Bio = () => {
         variant="h5"
         fontWeight={700}
         sx={{
-          transform: "scale(1.2)",
-          transformOrigin: "center left",
           my: 3,
           mt: 4,
         }}
       >
         Nevine Acotanza
       </Typography>
-      <Typography my={2}>Chief Operating Officer</Typography>
-      <Typography fontWeight={500} my={2}>
+      <Typography my={2} color="text.secondary">
+        Chief Operating Officer
+      </Typography>
+      <Typography fontWeight={500} my={2} color="text.secondary">
         I am available for freelance work. Connect with me via and call in to my
         account.
       </Typography>
@@ -80,11 +80,11 @@ const Bio = () => {
         }}
       >
         <Stack direction="row" my={1}>
-          <Typography>Phone:</Typography>
+          <Typography color="text.secondary">Phone:</Typography>
           <Typography className="hover">+012 345 678 90</Typography>
         </Stack>
         <Stack direction="row">
-          <Typography>Email:</Typography>
+          <Typography color="text.secondary">Email:</Typography>
           <Typography className="hover">admin@example.com</Typography>
         </Stack>
       </Box>

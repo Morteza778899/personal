@@ -4,7 +4,10 @@ import FormMe from "./FormMe";
 
 const Contact = () => {
   return (
-    <Box id='Contact' sx={{ maxWidth: 1300, mx: "auto", my: 10 }}>
+    <Box
+      id="Contact"
+      sx={{ maxWidth: 1300, mx: "auto", my: 10, px: { xs: 2, sm: 3, md: 4 } }}
+    >
       <Box sx={{ my: 10 }}>
         <Typography
           variant="body2"
@@ -18,10 +21,10 @@ const Contact = () => {
         </Typography>
       </Box>
       <Grid container spacing={5}>
-        <Grid item xs={4.5}>
+        <Grid item xs={12} lg={4.5}>
           <Bio />
         </Grid>
-        <Grid item xs={7.5}>
+        <Grid item xs={12} lg={7.5}>
           <FormMe />
         </Grid>
       </Grid>

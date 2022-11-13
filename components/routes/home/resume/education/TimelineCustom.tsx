@@ -14,7 +14,7 @@ interface Iprops {
 
 const TimelineCustom: FC<Iprops> = ({ data }) => {
   return (
-    <Timeline>
+    <Timeline sx={{ px: { xs: 0, sm: 2, md: 3 } }}>
       {data.map((value, index) => (
         <TimelineItem
           key={index}

@@ -1,5 +1,6 @@
-import { createTheme, responsiveFontSizes } from "@mui/material";
-import { amber, deepOrange, grey } from '@mui/material/colors';
+import { createTheme } from "@mui/material";
+import { grey } from '@mui/material/colors';
+
 export const getDesignTokens = (mode) => ({
   palette: {
     mode,
@@ -43,29 +44,6 @@ export const getDesignTokens = (mode) => ({
   },
 });
 
-
-// getDesignTokens = responsiveFontSizes(getDesignTokens)
-const theme = createTheme({
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: ({ ownerState, theme }) => ({
-          backgroundImage: theme.palette.background.paper,
-          boxShadow: theme.palette.shadow.default,
-        })
-      }
-    },
-    MuiSvgIcon: {
-      styleOverrides: {
-        fontSizeLarge: {
-          width: '2em',
-          height: '2em',
-        }
-      }
-    }
-  }
-})
-
 export const defaultTheme = {
   components: {
     MuiTypography: {
@@ -82,7 +60,6 @@ export const defaultTheme = {
           boxShadow: theme.palette.shadow.default,
           backgroundImage: theme.palette.background.paper,
           position: 'relative',
-          transition: 'all 0.45s',
           zIndex: 100,
           borderRadius: '6px',
           "& .hover-up,.hover-icon": {
@@ -104,6 +81,7 @@ export const defaultTheme = {
           }
         }),
         elevation1: ({ ownerState, theme }) => ({
+          transition: 'all 0.45s',
           "&:hover": {
             "&:before": {
               opacity: 1
@@ -112,6 +90,7 @@ export const defaultTheme = {
           }
         }),
         elevation2: ({ ownerState, theme }) => ({
+          transition: 'all 0.45s',
           "&:hover": {
             "&:before": {
               opacity: 1
@@ -125,6 +104,7 @@ export const defaultTheme = {
           }
         }),
         elevation3: ({ ownerState, theme }) => ({
+          transition: 'all 0.45s',
           "& p,h5,.hover-up,.hover-icon,svg": {
             transition: 'all .4s'
           },
@@ -201,12 +181,20 @@ export const defaultTheme = {
         })
       },
     },
+    MuiIconButton: {
+      styleOverrides: {
+        root: ({ ownerState, theme }) => ({
+          boxShadow: theme.palette.shadow.default,
+          backgroundImage: theme.palette.background.paper,
+          position: 'relative',
+          transition: 'all 0.45s',
+          zIndex: 100,
+          borderRadius: '6px',
+        })
+      },
+    }
   },
   typography: {
-    // fontFamily: "IranYekan",
-    // allVariants: {
-    //   direction: "rtl",
-    // },
     subtitle2: {
       fontSize: 13,
       fontWeight: 400,

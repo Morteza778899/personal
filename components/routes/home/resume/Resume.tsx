@@ -10,7 +10,11 @@ const Resume = () => {
   const data = ["Education", "Professional Skills", "Experience", "Interview"];
   const [tab, setTab] = useState("Education");
   return (
-    <Box id='Resume' component="section" sx={{ maxWidth: 1300, mx: "auto", my: 14 }}>
+    <Box
+      id="Resume"
+      component="section"
+      sx={{ maxWidth: 1300, mx: "auto", my: 14, px: { xs: 2, sm: 3, md: 4 } }}
+    >
       <ResumeHeader data={data} tab={tab} setTab={setTab} />
       <Education open={tab === "Education"} />
       <Skills open={tab === "Professional Skills"} />

@@ -46,7 +46,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <Box id="Testimonial" component="section" sx={{ maxWidth: 1300, mx: "auto", my: 14 }}>
+    <Box id="Testimonial" component="section" sx={{ maxWidth: 1300, mx: "auto", my: 14, px: { xs: 2, sm: 3, md: 4 } }}>
       <Header />
       <Silder data={data} />
     </Box>

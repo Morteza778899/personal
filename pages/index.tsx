@@ -62,19 +62,19 @@ export default function Home() {
       <Header location={location} />
       <main>
         <Main />
-        <Divider sx={{ my: 7, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 7, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
         <Features />
-        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
         <Portfolio />
-        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
         <Resume />
-        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
         <Testimonial />
-        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
         <Pricing />
-        <Divider sx={{ my: 5, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 5, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
         <Contact />
-        <Divider sx={{ my: 12, maxWidth: 1200, mx: "auto" }} />
+        <Divider sx={{ my: 12, maxWidth: 1200, mx: { xs: 5, lg: "auto" } }} />
       </main>
       <Footer />
     </Box>

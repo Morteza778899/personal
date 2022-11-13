@@ -6,7 +6,7 @@ const PicMain = () => {
     return (
         <>
             <Paper elevation={0}
-                sx={{ width: .93, height: .75, m: 4, p: 5, position: 'absolute', left: -10, bottom: -4, zIndex: 1 }}>
+                sx={{ width: {xs:.88,sm:.93}, height: .75, m: 4, p: 5, position: 'absolute', left: -10, bottom: -4, zIndex: 1 }}>
             </Paper>
             <Box sx={{
                 "& img": {

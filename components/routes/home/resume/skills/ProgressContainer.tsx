@@ -11,7 +11,10 @@ const ProgressContainer: FC<Iprops> = ({ data }) => {
   return (
     <Box>
       {data.map((value, index) => (
-        <Box key={index} sx={{ my: 4 }}>
+        <Box
+          key={index}
+          sx={{ my: { xs: 2, sm: 3, md: 4 }, mx: { xs: 1, sm: 2, md: 3 } }}
+        >
           <Stack direction="row" justifyContent="space-between" sx={{ my: 1 }}>
             <Typography variant="subtitle2" fontWeight={500} letterSpacing={2}>
               {value.title}

@@ -14,7 +14,7 @@ const TabPricing: FC<Iprops> = ({ data, tab, setTab }) => {
     <Paper elevation={0} sx={{ borderRadius: "10px" }}>
       <Grid container direction="row" sx={{ my: 3 }}>
         {data.map((value, index) => (
-          <Grid item xs={4} key={index} sx={{ cursor: "pointer" }}>
+          <Grid item xs={12} md={4} key={index} sx={{ cursor: "pointer" }}>
             <Paper
               elevation={0}
               onClick={() => setTab(value)}
@@ -41,7 +41,7 @@ const TabPricing: FC<Iprops> = ({ data, tab, setTab }) => {
                 variant="h6"
                 fontWeight={600}
                 textAlign="center"
-                py={4}
+                py={{ xs: 3, md: 4 }}
               >
                 {value}
               </Typography>

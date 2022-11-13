@@ -8,18 +8,18 @@ import CopyrightIcon from "@mui/icons-material/Copyright";
 const Footer = () => {
   return (
     <>
-      <Box sx={{ maxWidth: 1200, mx: "auto", mt: 8 }}>
+      <Box sx={{ maxWidth: 1200, mx: "auto", mt: 8, px: { xs: 2, sm: 3, md: 4 } }}>
         <Grid container spacing={6}>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={6} lg={3}>
             <Logo />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={6} lg={3}>
             <Link />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={6} lg={3}>
             <Resources />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={6} lg={3}>
             <Developers />
           </Grid>
         </Grid>

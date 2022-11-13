@@ -39,23 +39,24 @@ const Silder: FC<Iprops> = ({ data }) => {
   return (
     <Box
       sx={{
-        mt:5,
+        mt: 5,
+        width: 1,
         "& .swiper-pagination": {
           "& span": {
             width: 12,
             height: 12,
             m: "10px !important",
             "&.swiper-pagination-bullet-active": {
-              backgroundColor:  theme.palette.primary.main,
+              backgroundColor: theme.palette.primary.main,
             },
           },
         },
       }}
     >
       <Swiper
-        spaceBetween={0}
+        spaceBetween={50}
         slidesPerView={1}
-        style={{ width: "100%", paddingTop: "20px", paddingBottom: "80px" }}
+        style={{ paddingTop: "20px", paddingBottom: "80px" }}
         modules={[Pagination, Navigation]}
         navigation={{ nextEl: "#swiper-forward", prevEl: "#swiper-back" }}
         pagination={{ clickable: true }}
@@ -65,47 +66,60 @@ const Silder: FC<Iprops> = ({ data }) => {
       >
         {data.map((value, index) => (
           <SwiperSlide key={index}>
-            <Grid container sx={{ maxWidth: 1150, mx: "auto" }} spacing={5}>
-              <Grid item xs={4.5}>
-                <Paper elevation={0} sx={{ p: 4 }}>
-                  <Box
-                    sx={{
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      "& img": {
-                        width: 1,
-                        height: "unset",
-                        transform: "scale(1.1)",
-                        transition: "all .4s",
-                        ":hover": {
-                          transform: "scale(1.2)",
+            <Grid
+              container
+              sx={{ width: 1, maxWidth: 1150, mx: "auto" }}
+              spacing={{ xs: 3, lg: 5 }}
+            >
+              <Grid item xs={12} lg={4.5}>
+                <Paper elevation={0} sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
+                  <Stack direction={{ xs: "row", lg: "column" }} gap={3}>
+                    <Box
+                      sx={{
+                        borderRadius: "10px",
+                        overflow: "hidden",
+                        "& img": {
+                          width: 1,
+                          height: "unset",
+                          transform: "scale(1.1)",
+                          transition: "all .4s",
+                          ":hover": {
+                            transform: "scale(1.2)",
+                          },
                         },
-                      },
-                    }}
-                  >
-                    <Image src={value.image.src} alt="" />
-                  </Box>
-                  <Typography
-                    variant="subtitle2"
-                    fontWeight={500}
-                    sx={{ letterSpacing: "1px", my: 3, color: "primary.main" }}
-                  >
-                    {value.image.caption}
-                  </Typography>
-                  <Typography fontWeight={600} mb={1} variant="h5">
-                    {value.image.title}
-                  </Typography>
-                  <Typography variant="subtitle2">
-                    {value.image.body}
-                  </Typography>
+                      }}
+                    >
+                      <Image src={value.image.src} alt="" />
+                    </Box>
+                    <Stack>
+                      <Typography
+                        variant="subtitle2"
+                        fontWeight={500}
+                        sx={{
+                          letterSpacing: "1px",
+                          my: 2,
+                          color: "primary.main",
+                        }}
+                      >
+                        {value.image.caption}
+                      </Typography>
+                      <Typography fontWeight={600} mb={1} variant="h5">
+                        {value.image.title}
+                      </Typography>
+                      <Typography variant="subtitle2">
+                        {value.image.body}
+                      </Typography>
+                    </Stack>
+                  </Stack>
                 </Paper>
               </Grid>
-              <Grid item xs={7.5}>
+              <Grid item xs={12} lg={7.5}>
                 <Stack sx={{ height: 1, justifyContent: "space-between" }}>
                   <Stack
                     direction="row"
                     justifyContent="space-between"
                     alignItems="center"
+                    sx={{ display: { xs: "none", lg: "flex" } }}
                   >
                     <Box
                       sx={{
@@ -148,29 +162,38 @@ const Silder: FC<Iprops> = ({ data }) => {
                       </Paper>
                     </Stack>
                   </Stack>
-                  <Paper elevation={0} sx={{ p: 5 }}>
+                  <Paper
+                    elevation={0}
+                    sx={{ p: { xs: 3, sm: 4, md: 5 } }}
+                  >
                     <Stack
-                      direction="row"
+                      direction={{ xs: "column", sm: "row" }}
                       justifyContent="space-between"
-                      alignItems="center"
+                      alignItems={{ xs: "flex-start", sm: "center" }}
                     >
                       <Box>
                         <Typography variant="h5" fontWeight={500}>
                           {value.title}
                         </Typography>
-                        <Typography fontWeight={500} my={1}>
+                        <Typography
+                          fontWeight={500}
+                          my={1}
+                          sx={{ opacity: 0.7 }}
+                        >
                           {value.caption}
                         </Typography>
                       </Box>
                       <Paper
                         elevation={0}
-                        sx={{ p: 1.5, height: "fit-content" }}
+                        sx={{ p: 1.5, height: "fit-content",my:1 }}
                       >
                         <Rating value={value.rate} size="small" readOnly />
                       </Paper>
                     </Stack>
                     <Divider sx={{ my: 2.5 }} />
-                    <Typography>{value.body}</Typography>
+                    <Typography fontWeight={500} sx={{ opacity: 0.7 }}>
+                      {value.body}
+                    </Typography>
                   </Paper>
                 </Stack>
               </Grid>

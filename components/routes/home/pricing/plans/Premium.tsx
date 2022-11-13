@@ -34,29 +34,45 @@ const Premium: FC<Props> = ({ open }) => {
   ];
   return (
     <Fade in={open} unmountOnExit>
-      <Box sx={{ p: 4 }}>
-        <Stack direction="row" justifyContent="space-between">
+      <Box sx={{ p: { xs: 3, sm: 4 } }}>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          justifyContent="space-between"
+        >
           <Box>
             <Typography variant="h5" fontWeight={700}>
               Customize Your Single Page
             </Typography>
             <Typography my={1}>Elementor / WPBakery</Typography>
           </Box>
-          <Paper elevation={0} sx={{ height: "fit-content", p: 2 }}>
+          <Paper
+            elevation={0}
+            sx={{ height: "fit-content", width: "fit-content", p: 2, my: 1 }}
+          >
             <Typography variant="h4" fontWeight={700} color="primary.main">
               $90.00
             </Typography>
           </Paper>
         </Stack>
         <Typography
-          sx={{ my: 5, fontWeight: 500, maxWidth: 600, opacity: 0.7 }}
+          sx={{
+            my: { xs: 2, sm: 3, md: 4, lg: 12 },
+            fontWeight: 500,
+            maxWidth: 600,
+            opacity: 0.7,
+          }}
         >
           All the Lorem Ipsum generators on the Internet tend to repeat
           predefined chunks as necessary
         </Typography>
         <Grid container>
           {data.map((value, index) => (
-            <Grid key={index} xs={6} sx={{ py: 1.3, px: 4 }}>
+            <Grid
+              key={index}
+              xs={12}
+              sm={6}
+              sx={{ py: 1.3, px: { xs: 1, sm: 1.65, md: 3, lg: 4 } }}
+            >
               <Stack direction={"row"}>
                 <CheckIcon sx={{ color: "primary.main", mx: 0.5 }} />
                 <Typography fontWeight={500}>{value}</Typography>

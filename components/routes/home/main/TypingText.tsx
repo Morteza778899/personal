@@ -38,7 +38,7 @@ const TypingText = () => {
         }
     }, [open3])
     return (
-        <Stack sx={{ width: '800px', flexDirection: 'row', alignItems: 'center' }}>
+        <Stack sx={{ maxWidth: '800px', flexDirection: 'row', alignItems: 'center' }}>
             <Typography variant="h3" sx={{ fontWeight: 700, display: 'inline', mr: 1 }}>a </Typography>
             <Collapse in={open1} timeout={1000} orientation="horizontal">
                 <Typography variant="h3" sx={{ fontWeight: 700, whiteSpace: 'nowrap',px:1 }}>Developer.</Typography>

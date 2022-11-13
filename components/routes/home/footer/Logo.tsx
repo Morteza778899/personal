@@ -13,7 +13,7 @@ const Logo = () => {
   const themeMode = useContext(Context).colorTheme;
   return (
     <>
-        <Image src={logo} alt="" />
+      <Image src={logo} alt="" />
       <Box
         sx={{
           my: 4,

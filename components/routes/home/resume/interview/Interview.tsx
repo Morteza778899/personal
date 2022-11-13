@@ -50,7 +50,7 @@ const Interview: FC<Iprops> = ({ open }) => {
   return (
     <Fade in={open} unmountOnExit>
       <Grid container sx={{ py: 3 }} spacing={2}>
-        <Grid item xs={6}>
+      <Grid item xs={12} lg={6}>
           <Typography
             variant="body2"
             sx={{ letterSpacing: "3px", mx: 3, color: "primary.main" }}
@@ -60,13 +60,13 @@ const Interview: FC<Iprops> = ({ open }) => {
           <Typography
             variant="h4"
             fontWeight={700}
-            sx={{ mx: 3, mt: 1, mb: 3 }}
+            sx={{ mx: { xs: 1, sm: 2, md: 3 }, mt: 1, mb: 3 }}
           >
             Company Experience
           </Typography>
           <TimelineCustom data={data1} />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={6}>
           <Typography
             variant="body2"
             sx={{ letterSpacing: "3px", mx: 3, color: "primary.main" }}
@@ -76,7 +76,7 @@ const Interview: FC<Iprops> = ({ open }) => {
           <Typography
             variant="h4"
             fontWeight={700}
-            sx={{ mx: 3, mt: 1, mb: 3 }}
+            sx={{ mx: { xs: 1, sm: 2, md: 3 }, mt: 1, mb: 3 }}
           >
             Job Experience
           </Typography>
